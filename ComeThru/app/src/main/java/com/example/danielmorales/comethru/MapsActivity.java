@@ -70,7 +70,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
                 .build();
-        Log.d("----+", "onCreate: ##################################################");
         mGoogleApiClient.connect();
     }
 
@@ -103,7 +102,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mFusedLoationClient = LocationServices.getFusedLocationProviderClient(this);
         mFusedLoationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
 
-        @Override
+            @Override
             public void onSuccess(Location location) {
                 if (location != null) {
 

@@ -20,18 +20,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.sql.DatabaseMetaData;
 import java.util.logging.FileHandler;
 import java.util.logging.StreamHandler;
 
-public class paleteroRegister extends AppCompatActivity implements View.OnClickListener {
+public class paleteroRegister extends AppCompatActivity {
 
     private Button buttonRegister;
     private EditText emailButton;
     private EditText passwordButton;
-
     private ProgressDialog progressDialog;
-
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,15 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         emailButton = (EditText) findViewById(R.id.email);
         passwordButton = (EditText) findViewById(R.id.password);
         progressDialog = new ProgressDialog(this);
-        buttonRegister.setOnClickListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDatabase.child("Name").setValue("lol");
+            }
+        });
     }
 
     public void registerUser(){
@@ -89,6 +96,7 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
                 });
 
     }
+    /*
     @Override
     public void onClick(View view){
         if(view == buttonRegister){
@@ -96,4 +104,5 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         }
 
     }
+    */
 }

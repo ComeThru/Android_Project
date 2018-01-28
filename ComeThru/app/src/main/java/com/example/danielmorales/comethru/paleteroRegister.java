@@ -35,10 +35,6 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paletero_register);
 
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        progressDialog = new ProgressDialog(this);
-
         buttonRegister = (Button) findViewById(R.id.register);
         emailButton = (EditText) findViewById(R.id.email);
         passwordButton = (EditText) findViewById(R.id.password);

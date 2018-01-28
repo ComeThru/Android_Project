@@ -81,13 +81,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Move Camera @ same pace user moves
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-/*
+        //Database organization
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("driverAvailable");
 
         GeoFire geoFire = new GeoFire(ref);
         geoFire.setLocation(userId, new GeoLocation(location.getLatitude(), location.getLongitude())); // ID stored for driver
-*/
+
     }
 
     @Override

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pink_squinting_ice_cream"
     android:orientation="vertical"
     tools:context="com.example.danielmorales.comethru.CustomerRegistration">
 
@@ -12,49 +13,61 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:text="Name" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:text="" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:text="Email" />
 
     <EditText
         android:id="@+id/customer_registration_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:text="" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:text="Password" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:inputType="textPersonName"
         android:text="" />
     <Button
         android:text="Enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/registerButton"/>
+        android:id="@+id/registerButton"
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="30dp"/>
 </LinearLayout>

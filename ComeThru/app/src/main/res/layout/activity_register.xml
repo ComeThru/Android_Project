@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/large"
     tools:context="com.example.danielmorales.comethru.Register">
 
     <Button
         android:id="@+id/customer"
-        android:layout_width="188dp"
-        android:layout_height="108dp"
+        android:layout_width="212dp"
+        android:layout_height="155dp"
+        android:background="#fffb16"
         android:text="Customer"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="105dp" />
+        android:textSize="35dp"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="101dp" />
 
     <Button
         android:id="@+id/vendorButton"
-        android:layout_width="186dp"
-        android:layout_height="108dp"
+        android:layout_width="212dp"
+        android:layout_height="155dp"
+        android:background="#16fff3"
         android:text="vendor"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="311dp" />
+        android:textSize="35dp"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="288dp" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

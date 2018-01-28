@@ -41,6 +41,9 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
 
         buttonRegister2.setOnClickListener(this);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        progressDialog = new ProgressDialog(this);
 
 
     }
@@ -76,13 +79,10 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
                 });
 
 
-
         //if validations are okay
 
         progressDialog.setMessage("Registering User");
         progressDialog.show();
-
-
     }
 
     @Override

@@ -40,6 +40,9 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         passwordButton = (EditText) findViewById(R.id.password);
 
         buttonRegister.setOnClickListener(this);
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        progressDialog = new ProgressDialog(this);
     }
 
     public void registerUser(){

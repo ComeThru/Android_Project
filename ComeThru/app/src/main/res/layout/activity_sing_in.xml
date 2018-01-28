@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,30 +9,50 @@
     android:orientation="vertical"
     tools:context="com.example.danielmorales.comethru.SingIn">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+    <LinearLayout
 
-    <Button
-        android:id="@+id/signInButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign In" />
+        android:layout_width="272dp"
+        android:layout_height="162dp"
+        android:background="@drawable/large"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.409">
 
-    <TextView
-        android:id="@+id/register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textAlignment="center"
+            hyuhuh/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

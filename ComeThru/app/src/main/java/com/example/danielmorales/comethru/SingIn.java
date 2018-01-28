@@ -20,8 +20,7 @@ public class SingIn extends AppCompatActivity {
         setContentView(R.layout.activity_sing_in);
         TextView registerButtton = (TextView) findViewById(R.id.register);
         Button sign_in_button = (Button) findViewById(R.id.signInButton);
-
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         person = intent.getIntExtra("person", 0);
 
         registerButtton.setOnClickListener(new View.OnClickListener() {
@@ -41,10 +40,12 @@ public class SingIn extends AppCompatActivity {
         sign_in_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SingIn.this, MainActivity.class);
+                Intent intent = new Intent(SingIn.this, MapsActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
 
 

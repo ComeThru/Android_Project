@@ -2,8 +2,9 @@ package com.example.danielmorales.comethru;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
-public class CustomerRegistration extends AppCompatActivity {
+public class CustomerRegistration extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

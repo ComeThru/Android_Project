@@ -21,10 +21,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.sql.DatabaseMetaData;
+import java.util.Map;
 import java.util.logging.FileHandler;
 import java.util.logging.StreamHandler;
 
-public class paleteroRegister extends AppCompatActivity {
+public class paleteroRegister extends AppCompatActivity{
 
     private Button buttonRegister;
     private EditText emailButton;
@@ -48,9 +49,11 @@ public class paleteroRegister extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDatabase.child("Name").setValue("lol");
+                Intent intent = new Intent(paleteroRegister.this, payPalActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
     public void registerUser(){
@@ -74,6 +77,12 @@ public class paleteroRegister extends AppCompatActivity {
         progressDialog.setMessage("Registering User");
         progressDialog.show();
 
+
+        //mDatabase.child("Name").setValue(email);
+
+        Intent intent = new Intent(paleteroRegister.this, payPalActivity.class);
+        startActivity(intent);
+
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -83,27 +92,16 @@ public class paleteroRegister extends AppCompatActivity {
                             //user is succesfully registered and logged in
                             //we well start the profile activity here
                             //right now lets display a toast only
+
                             Toast.makeText(paleteroRegister.this, "Registered Successfully ", Toast.LENGTH_SHORT).show();
                             String user_id = firebaseAuth.getCurrentUser().getUid();
                             DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Driver").child(user_id);
                             current_user_db.setValue(true);
-
-                        }else{
-                            //Toast.makeText(paleteroRegister.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
-                        Intent intent = new Intent(paleteroRegister.this, MapsActivity.class);
+                        Intent intent = new Intent(paleteroRegister.this, payPalActivity.class);
                         startActivity(intent);
                     }
                 });
 
     }
-    /*
-    @Override
-    public void onClick(View view){
-        if(view == buttonRegister){
-            registerUser();
-        }
-
-    }
-    */
 }

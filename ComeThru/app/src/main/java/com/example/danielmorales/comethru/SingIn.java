@@ -49,15 +49,6 @@ public class SingIn extends AppCompatActivity implements View.OnClickListener{
         signIn.setOnClickListener(this);
         register.setOnClickListener(this);
 
-        Button mapButton = (Button) findViewById(R.id.mapButton);
-
-        mapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SingIn.this, MapsActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void userLogin(){
@@ -78,6 +69,9 @@ public class SingIn extends AppCompatActivity implements View.OnClickListener{
 
         progressDialog.setMessage("Registering User");
         progressDialog.show();
+
+        Intent intent = new Intent(SingIn.this, MapsActivity.class);
+        startActivity(intent);
 
         Log.d("sdk","kds");
 

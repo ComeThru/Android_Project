@@ -52,6 +52,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".CustomerRegistration" />
+        <activity android:name=".payPalActivity"></activity>
     </application>
 
 </manifest>

@@ -56,12 +56,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        LatLng seaside = new LatLng(36.652922,-121.798163);
+        mMap.addMarker(new MarkerOptions().position(seaside).title("Icecream is this way!"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(seaside, 15));
+        /*
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         buildGoogleApiClient();
         mMap.setMyLocationEnabled(true);
+        */
     }
 
     protected synchronized void buildGoogleApiClient() {

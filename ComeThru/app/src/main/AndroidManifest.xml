@@ -9,7 +9,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -45,10 +45,12 @@
         <activity android:name=".registerParent" />
         <activity android:name=".paleteroRegister" />
         <activity android:name=".Register" />
-
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".CustomerRegistration"></activity>
-
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".CustomerRegistration" />
+        <activity
+            android:name=".navigation_drawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

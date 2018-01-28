@@ -15,6 +15,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "712998772480-bshblkqu0v0e9016nvhb2dccnvsudk3j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danielmorales.comethru",
+            "certificate_hash": "e973bec6952d7ecdefda0d58d9154e4b905c7b76"
+          }
+        },
+        {
+          "client_id": "712998772480-fic3188l730knkg24gruak1hppp8703f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danielmorales.comethru",
+            "certificate_hash": "d40f100a7ad517fb9d75364778092d03fb5429e0"
+          }
+        },
+        {
+          "client_id": "712998772480-sii0rhg54tgs5d8do8flb82f1661ugee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danielmorales.comethru",
+            "certificate_hash": "f54aa0d1a9012cd04e2953f90b02fd32d8907037"
+          }
+        },
+        {
           "client_id": "712998772480-68a05k2o0v251qr7fmrd4veh639er6bh.apps.googleusercontent.com",
           "client_type": 3
         }

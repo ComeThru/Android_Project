@@ -87,8 +87,34 @@
             android:text="Non-Motorized" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/EmailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/passwodText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
     <Button
-        android:id="@+id/paletero_to_maps"
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enter" />

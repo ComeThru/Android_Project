@@ -24,13 +24,19 @@
 
 
         <EditText
+            android:inputType="textEmailAddress"
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+<<<<<<< HEAD
+            android:textAlignment="center"/>
+=======
             android:textAlignment="center" />
+>>>>>>> f1d46fe070b7b582d4fb00c9e896f4e6c2e9aa62
 
         <EditText
+
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

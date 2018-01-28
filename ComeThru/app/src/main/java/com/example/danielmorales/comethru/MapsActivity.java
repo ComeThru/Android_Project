@@ -77,7 +77,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("driverAvailable");
 
         GeoFire geoFire = new GeoFire(ref);
-        geoFire.setLocation(userId, new GeoLocation(location.getLatitude(), location.getLongitude())); // ID stored for driver
+        geoFire.setLocation(userId, new GeoLocation(location.getLatitude(), location.getLongitude())); // ID stored for driverAvailable
 
     }
 

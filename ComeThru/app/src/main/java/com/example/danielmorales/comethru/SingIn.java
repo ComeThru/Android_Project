@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnContextClickListener;
 import android.widget.Button;
@@ -47,6 +48,16 @@ public class SingIn extends AppCompatActivity implements View.OnClickListener{
 
         signIn.setOnClickListener(this);
         register.setOnClickListener(this);
+
+        Button mapButton = (Button) findViewById(R.id.mapButton);
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SingIn.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void userLogin(){
@@ -68,6 +79,8 @@ public class SingIn extends AppCompatActivity implements View.OnClickListener{
         progressDialog.setMessage("Registering User");
         progressDialog.show();
 
+        Log.d("sdk","kds");
+
         firebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -75,7 +88,10 @@ public class SingIn extends AppCompatActivity implements View.OnClickListener{
                         progressDialog.dismiss();
 
                         if(task.isSuccessful()){
+                            Log.d("lol","lol");
                             //start the profile activity
+                            Intent intent = new Intent(SingIn.this, MapsActivity.class);
+                            startActivity(intent);
                         }
                     }
                 });

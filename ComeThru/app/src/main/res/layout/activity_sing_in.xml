@@ -32,7 +32,7 @@
             android:textAlignment="center"/>
 
     <EditText
-            android:id="@+id/editText"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -53,6 +53,14 @@
             android:text="Sign Up" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="3dp" />
 
 
 </android.support.constraint.ConstraintLayout>

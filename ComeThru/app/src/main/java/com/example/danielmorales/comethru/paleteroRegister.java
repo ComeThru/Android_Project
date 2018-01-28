@@ -78,7 +78,7 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
                         }else{
                             //Toast.makeText(paleteroRegister.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
-                        Intent intent = new Intent(paleteroRegister.this, PayPalActivity.class);
+                        Intent intent = new Intent(paleteroRegister.this, MapsActivity.class);
                         startActivity(intent);
                     }
                 });

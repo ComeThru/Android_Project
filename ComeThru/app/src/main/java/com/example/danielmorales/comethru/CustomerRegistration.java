@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Map;
 import java.util.logging.FileHandler;
 import java.util.logging.StreamHandler;
 
@@ -76,7 +77,7 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
                         }else{
                             //Toast.makeText(CustomerRegistration.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
-                        Intent intent = new Intent(CustomerRegistration.this, PayPalActivity.class);
+                        Intent intent = new Intent(CustomerRegistration.this, MapsActivity.class);
                         startActivity(intent);
                     }
                 });

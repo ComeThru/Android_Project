@@ -35,14 +35,15 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
         <activity android:name=".registerParent" />
         <activity android:name=".paleteroRegister" />
-        <activity android:name=".Register"></activity>
-
+        <activity android:name=".Register" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

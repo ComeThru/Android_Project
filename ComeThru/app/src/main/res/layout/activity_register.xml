@@ -7,6 +7,7 @@
     tools:context="com.example.danielmorales.comethru.Register">
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/customer"
         android:layout_width="188dp"
         android:layout_height="108dp"
@@ -21,4 +22,20 @@
         android:text="vendor"
         tools:layout_editor_absoluteX="101dp"
         tools:layout_editor_absoluteY="311dp" />
+=======
+        android:id="@+id/im_a_parent"
+        android:layout_width="368dp"
+        android:layout_height="274dp"
+        android:text="I'm a consumer"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <Button
+        android:id="@+id/im_an_ice_cream_vendor"
+        android:layout_width="368dp"
+        android:layout_height="274dp"
+        android:text="I'M and ICE CReam vendor"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="285dp" />
+>>>>>>> 735a8f9cf8441d3ab27533ae0bd61a8a85fbdbf4
 </android.support.constraint.ConstraintLayout>

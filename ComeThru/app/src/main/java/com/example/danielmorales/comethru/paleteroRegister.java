@@ -1,6 +1,7 @@
 package com.example.danielmorales.comethru;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +41,9 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         passwordButton = (EditText) findViewById(R.id.password);
 
         buttonRegister.setOnClickListener(this);
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        progressDialog = new ProgressDialog(this);
     }
 
     public void registerUser(){
@@ -67,14 +71,17 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         if(task.isSuccessful()){
                             //user is succesfully registered and logged in
                             //we well start the profile activity here
                             //right now lets display a toast only
                             Toast.makeText(paleteroRegister.this, "Registered Successfully ", Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(paleteroRegister.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(paleteroRegister.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
+                        Intent intent = new Intent(paleteroRegister.this, PayPalActivity.class);
+                        startActivity(intent);
                     }
                 });
 

@@ -51,6 +51,11 @@
             android:name=".navigation_drawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme"></activity>
+
+        <activity android:name=".PayPalActivity"/>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".CustomerRegistration" />
+
     </application>
 
 </manifest>

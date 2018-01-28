@@ -2,11 +2,13 @@ package com.example.danielmorales.comethru;
 
 import android.app.ProgressDialog;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +28,7 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
     private Button buttonRegister2;
     private EditText emailButton2;
     private EditText passwordButton2;
-
+    private Button paypal;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
@@ -44,7 +46,6 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
         firebaseAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
-
 
     }
     public void registerUser(){
@@ -73,8 +74,10 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
                             //right now lets display a toast only
                             Toast.makeText(CustomerRegistration.this, "Registered Successfully ", Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(CustomerRegistration.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(CustomerRegistration.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
+                        Intent intent = new Intent(CustomerRegistration.this, PayPalActivity.class);
+                        startActivity(intent);
                     }
                 });
 

@@ -11,7 +11,10 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="20dp"
@@ -28,7 +31,31 @@
         android:text="" />
 
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:text="User Name" />
+
+    <EditText
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="20dp"
@@ -45,7 +72,10 @@
         android:text="" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:padding="5dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="20dp"
@@ -59,15 +89,16 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:text="" />
+
     <Button
         android:text="Enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/registerButton"
         android:layout_marginHorizontal="30dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/round_button"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="30dp"/>
 </LinearLayout>

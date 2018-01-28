@@ -74,6 +74,8 @@ public class SingIn extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
 
+                        Intent intent = new Intent(SingIn.this, MapsActivity.class);
+                        startActivity(intent);
                         if(task.isSuccessful()){
                             //start the profile activity
                         }

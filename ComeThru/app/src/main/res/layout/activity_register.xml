@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/large"
+    android:orientation="vertical"
     tools:context="com.example.danielmorales.comethru.Register">
 
     <Button
@@ -15,8 +15,11 @@
         android:background="#fffb16"
         android:text="Customer"
         android:textSize="35dp"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="101dp" />
+        app:layout_constraintBottom_toTopOf="@+id/vendorButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/vendorButton"
@@ -25,7 +28,10 @@
         android:background="#16fff3"
         android:text="vendor"
         android:textSize="35dp"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="288dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer" />
 
 </android.support.constraint.ConstraintLayout>

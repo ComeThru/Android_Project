@@ -80,12 +80,11 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
                             //user is succesfully registered and logged in
                             //we well start the profile activity here
                             //right now lets display a toast only
+
                             Toast.makeText(paleteroRegister.this, "Registered Successfully ", Toast.LENGTH_SHORT).show();
                             String user_id = firebaseAuth.getCurrentUser().getUid();
                             DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Driver").child(user_id);
                             current_user_db.setValue(true);
-                        }else{
-                            //Toast.makeText(paleteroRegister.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
                         Intent intent = new Intent(paleteroRegister.this, MapsActivity.class);
                         startActivity(intent);

@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity android:name=".registerParent" />
+        <activity android:name=".paleteroRegister" />
         <activity android:name=".Register"></activity>
     </application>
 

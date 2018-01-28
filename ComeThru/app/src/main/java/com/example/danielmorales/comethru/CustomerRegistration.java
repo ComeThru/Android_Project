@@ -43,7 +43,6 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
         passwordButton2 = (EditText) findViewById(R.id.password);
 
         buttonRegister2.setOnClickListener(this);
-
         firebaseAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
@@ -65,6 +64,9 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
             return;
         }
 
+        Intent intent = new Intent(CustomerRegistration.this,payPalActivity.class);
+        startActivity(intent);
+        
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -77,7 +79,7 @@ public class CustomerRegistration extends AppCompatActivity implements View.OnCl
                         }else{
                             //Toast.makeText(CustomerRegistration.this, "Could not register. Please try again ", Toast.LENGTH_SHORT).show();
                         }
-                        Intent intent = new Intent(CustomerRegistration.this, MapsActivity.class);
+                        Intent intent = new Intent(CustomerRegistration.this, payPalActivity.class);
                         startActivity(intent);
                     }
                 });

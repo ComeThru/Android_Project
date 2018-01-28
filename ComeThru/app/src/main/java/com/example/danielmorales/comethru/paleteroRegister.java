@@ -21,10 +21,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.sql.DatabaseMetaData;
+import java.util.Map;
 import java.util.logging.FileHandler;
 import java.util.logging.StreamHandler;
 
-public class paleteroRegister extends AppCompatActivity implements View.OnClickListener{
+public class paleteroRegister extends AppCompatActivity{
 
     private Button buttonRegister;
     private EditText emailButton;
@@ -44,6 +45,14 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(paleteroRegister.this, payPalActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -69,7 +78,10 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
         progressDialog.show();
 
 
-        mDatabase.child("Name").setValue(email);
+        //mDatabase.child("Name").setValue(email);
+
+        Intent intent = new Intent(paleteroRegister.this, payPalActivity.class);
+        startActivity(intent);
 
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -86,18 +98,10 @@ public class paleteroRegister extends AppCompatActivity implements View.OnClickL
                             DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Driver").child(user_id);
                             current_user_db.setValue(true);
                         }
-                        Intent intent = new Intent(paleteroRegister.this, MapsActivity.class);
+                        Intent intent = new Intent(paleteroRegister.this, payPalActivity.class);
                         startActivity(intent);
                     }
                 });
-
-    }
-
-    @Override
-    public void onClick(View view){
-        if(view == buttonRegister){
-            registerUser();
-        }
 
     }
 }

@@ -7,15 +7,6 @@
     tools:context="com.example.danielmorales.comethru.MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Soy Paletero Man"
-        android:id="@+id/Driver"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="I want the Paletero Man"
-        android:id="@+id/Customer"/>
+
 
 </LinearLayout>

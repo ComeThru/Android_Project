@@ -35,7 +35,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/Ray" />
+                android:src="@drawable/ray" />
 
             <TextView
                 android:layout_width="wrap_content"
